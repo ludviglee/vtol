@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <fx>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Sounds/gear.wav</path>
+      <position>
+        <x>-1.5</x>
+        <y>-1.5</y>
+        <z> 0.0</z>
+      </position>
+      <pitch>
+	<property>engines/engine[0]/rpm</property>
+	<factor>0.004</factor>
+	<min>0.3</min>
+	<max>2000.0</max>
+      </pitch>
+      <volume>
+	<offset>0.8</offset>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>10000.0</max-dist>
+    </engine>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Sounds/gear.wav</path>
+      <position>
+        <x>-1.5</x>
+        <y> 1.5</y>
+        <z> 0.0</z>
+      </position>
+      <pitch>
+	<property>engines/engine[1]/rpm</property>
+	<factor>0.004</factor>
+	<min>0.3</min>
+	<max>2000.0</max>
+      </pitch>
+      <volume>
+	<offset>0.8</offset>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>10000.0</max-dist>
+    </engine>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Sounds/gear.wav</path>
+      <position>
+        <x> 1.5</x>
+        <y> 1.5</y>
+        <z> 0.0</z>
+      </position>
+      <pitch>
+	<property>engines/engine[2]/rpm</property>
+	<factor>0.004</factor>
+	<min>0.3</min>
+	<max>2000.0</max>
+      </pitch>
+      <volume>
+	<offset>0.8</offset>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>10000.0</max-dist>
+    </engine>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Sounds/gear.wav</path>
+      <position>
+        <x> 1.5</x>
+        <y>-1.5</y>
+        <z> 0.0</z>
+      </position>
+      <pitch>
+	<property>engines/engine[3]/rpm</property>
+	<factor>0.004</factor>
+	<min>0.3</min>
+	<max>2000.0</max>
+      </pitch>
+      <volume>
+	<offset>0.8</offset>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>10000.0</max-dist>
+    </engine>
+
+  </fx>
+  
+</PropertyList>

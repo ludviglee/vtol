@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+<fdm_config name="pa28-181" version="2.0" release="ALPHA"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
+
+ <fileheader>
+   <author>Jon Ross</author>
+   <filecreationdate>2014-02-09</filecreationdate>
+   <version>Revision: 1.15</version>
+   <description>Models the VTOL test rig</description>
+ </fileheader>
+
+ <metrics>
+   <wingarea unit="M2">  1.00 </wingarea>
+   <wingspan unit="M">   1.00 </wingspan>
+   <wing_incidence>      0.00 </wing_incidence>
+   <chord unit="M">      1.00 </chord>
+   <htailarea unit="M2"> 1.00 </htailarea>
+   <htailarm unit="M">   1.00 </htailarm>
+   <vtailarea unit="M2"> 1.00 </vtailarea>
+   <vtailarm unit="M">   1.00 </vtailarm>
+   <location name="AERORP" unit="M">
+     <x> 0.00</x>
+     <y> 0.00</y>
+     <z> 0.00</z>
+   </location>
+   <location name="EYEPOINT" unit="M">
+     <x> 0.00</x>
+     <y> 0.00</y>
+     <z> 0.50</z>
+   </location>
+   <location name="VRP" unit="M">
+     <x> 0.00 </x>
+     <y> 0.00 </y>
+     <z> 0.00 </z>
+   </location>
+ </metrics>
+
+ <mass_balance>
+   <ixx unit="SLUG*FT2"> 600  </ixx>
+   <iyy unit="SLUG*FT2"> 600  </iyy>
+   <izz unit="SLUG*FT2"> 600  </izz>
+   <emptywt unit="LBS">  2000 </emptywt>
+   <location name="CG" unit="M">
+     <x> 0.00 </x>
+     <y> 0.00 </y>
+     <z> 0.00 </z>
+   </location>
+
+   <pointmass name="Payload">
+     <description>Cargo</description>
+     <weight unit="LBS">0.0</weight>
+     <location name="POINTMASS" unit="M">
+       <x> 0.00 </x>
+       <y> 0.00 </y>
+       <z> 0.50 </z>
+     </location>
+   </pointmass>
+
+ </mass_balance>
+
+ <ground_reactions>
+
+   <contact type="BOGEY" name="1">
+     <location unit="M">
+       <x> -2.50 </x>
+       <y> -2.50 </y>
+       <z> -1.40 </z>
+     </location>
+     <static_friction>0.80</static_friction>
+     <dynamic_friction>0.80</dynamic_friction>
+     <rolling_friction>0.80</rolling_friction>
+     <spring_coeff unit="LBS/FT">1000.00</spring_coeff>
+     <damping_coeff unit="LBS/FT/SEC">300.00</damping_coeff>
+     <max_steer unit="DEG">0.00</max_steer>
+     <brake_group>NONE</brake_group>
+     <retractable>0</retractable>
+   </contact>
+
+   <contact type="BOGEY" name="2">
+     <location unit="M">
+       <x> -2.50 </x>
+       <y>  2.50 </y>
+       <z> -1.40 </z>
+     </location>
+     <static_friction>0.80</static_friction>
+     <dynamic_friction>0.80</dynamic_friction>
+     <rolling_friction>0.80</rolling_friction>
+     <spring_coeff unit="LBS/FT">1000.00</spring_coeff>
+     <damping_coeff unit="LBS/FT/SEC">300.00</damping_coeff>
+     <max_steer unit="DEG">0.00</max_steer>
+     <brake_group>NONE</brake_group>
+     <retractable>0</retractable>
+   </contact>
+
+   <contact type="BOGEY" name="3">
+     <location unit="M">
+       <x>  2.50 </x>
+       <y>  2.50 </y>
+       <z> -1.40 </z>
+     </location>
+     <static_friction>0.80</static_friction>
+     <dynamic_friction>0.80</dynamic_friction>
+     <rolling_friction>0.80</rolling_friction>
+     <spring_coeff unit="LBS/FT">1000.00</spring_coeff>
+     <damping_coeff unit="LBS/FT/SEC">300.00</damping_coeff>
+     <max_steer unit="DEG">0.00</max_steer>
+     <brake_group>NONE</brake_group>
+     <retractable>0</retractable>
+   </contact>
+
+   <contact type="BOGEY" name="4">
+     <location unit="M">
+       <x>  2.50 </x>
+       <y> -2.50 </y>
+       <z> -1.40 </z>
+     </location>
+     <static_friction>0.80</static_friction>
+     <dynamic_friction>0.80</dynamic_friction>
+     <rolling_friction>0.80</rolling_friction>
+     <spring_coeff unit="LBS/FT">1000.00</spring_coeff>
+     <damping_coeff unit="LBS/FT/SEC">300.00</damping_coeff>
+     <max_steer unit="DEG">0.00</max_steer>
+     <brake_group>NONE</brake_group>
+     <retractable>0</retractable>
+   </contact>
+
+ </ground_reactions>
+
+ <propulsion>
+
+   <engine file="motor">
+     <location unit="M">
+       <x> -1.50 </x>
+       <y> -1.50 </y>
+       <z>  0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch> 90.00 </pitch>
+       <roll>   0.00 </roll>
+       <yaw>    0.00 </yaw>
+     </orient>
+     <thruster file="prop">
+       <sense>-1</sense>
+       <location unit="M">
+         <x> -1.50 </x>
+         <y> -1.50 </y>
+         <z>  0.00 </z>
+       </location>
+       <orient unit="DEG">
+         <pitch> 90.00 </pitch>
+         <roll>   0.00 </roll>
+         <yaw>    0.00 </yaw>
+       </orient>
+     </thruster>
+   </engine>
+
+   <engine file="motor">
+     <location unit="M">
+       <x> -1.50 </x>
+       <y>  1.50 </y>
+       <z>  0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch> 90.00 </pitch>
+       <roll>   0.00 </roll>
+       <yaw>    0.00 </yaw>
+     </orient>
+     <thruster file="prop">
+       <sense>1</sense>
+       <location unit="M">
+         <x> -1.50 </x>
+         <y>  1.50 </y>
+         <z>  0.00 </z>
+       </location>
+       <orient unit="DEG">
+         <pitch> 90.00 </pitch>
+         <roll>   0.00 </roll>
+         <yaw>    0.00 </yaw>
+       </orient>
+     </thruster>
+   </engine>
+
+   <engine file="motor">
+     <location unit="M">
+       <x>  1.50 </x>
+       <y>  1.50 </y>
+       <z>  0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch> 90.00 </pitch>
+       <roll>   0.00 </roll>
+       <yaw>    0.00 </yaw>
+     </orient>
+     <thruster file="prop">
+       <sense>-1</sense>
+       <location unit="M">
+         <x>  1.50 </x>
+         <y>  1.50 </y>
+         <z>  0.00 </z>
+       </location>
+       <orient unit="DEG">
+         <pitch> 90.00 </pitch>
+         <roll>   0.00 </roll>
+         <yaw>    0.00 </yaw>
+       </orient>
+     </thruster>
+   </engine>
+
+   <engine file="motor">
+     <location unit="M">
+       <x>  1.50 </x>
+       <y> -1.50 </y>
+       <z>  0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch> 90.00 </pitch>
+       <roll>   0.00 </roll>
+       <yaw>    0.00 </yaw>
+     </orient>
+     <thruster file="prop">
+       <sense>1</sense>
+       <location unit="M">
+         <x>  1.50 </x>
+         <y> -1.50 </y>
+         <z>  0.00 </z>
+       </location>
+       <orient unit="DEG">
+         <pitch> 90.00 </pitch>
+         <roll>   0.00 </roll>
+         <yaw>    0.00 </yaw>
+       </orient>
+     </thruster>
+   </engine>
+
+ </propulsion>
+
+ <aerodynamics>
+
+   <axis name="LIFT">
+
+     <function name="aero/force/Lift_alpha">
+       <description>Lift due to alpha</description>
+       <value>0.0</value>
+     </function>
+
+   </axis>
+
+   <axis name="DRAG">
+
+     <function name="aero/force/Drag_induced">
+       <description>Induced drag</description>
+       <product>
+         <property>aero/qbar-psf</property>
+         <property>aero/cl-squared</property>
+         <value>0.1</value>
+       </product>
+     </function>
+
+   </axis>
+
+ </aerodynamics>
+
+</fdm_config>

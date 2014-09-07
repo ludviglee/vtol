@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Export X/Y with Mirror col. as Ambient -->
+  <path>Models/vtol.ac</path>
+
+  <animation>
+    <type>spin</type>
+    <object-name>blade 1</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.5</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+    <center>
+      <x-m>-1.5</x-m>
+      <y-m>-1.5</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>blade 2</object-name>
+    <property>engines/engine[1]/rpm</property>
+    <factor>-0.5</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+    <center>
+      <x-m>-1.5</x-m>
+      <y-m> 1.5</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>blade 3</object-name>
+    <property>engines/engine[2]/rpm</property>
+    <factor>0.5</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+    <center>
+      <x-m> 1.5</x-m>
+      <y-m> 1.5</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>blade 4</object-name>
+    <property>engines/engine[3]/rpm</property>
+    <factor>-0.5</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+    <center>
+      <x-m> 1.5</x-m>
+      <y-m>-1.5</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+  </animation>
+  
+  <!-- compression -->
+  
+  <animation>
+    <type>translate</type>
+    <object-name>landing leg 1</object-name>
+    <property>gear/gear[0]/compression-ft</property>
+    <factor>0.3</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>landing leg 2</object-name>
+    <property>gear/gear[1]/compression-ft</property>
+    <factor>0.3</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>landing leg 3</object-name>
+    <property>gear/gear[2]/compression-ft</property>
+    <factor>0.3</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>landing leg 4</object-name>
+    <property>gear/gear[3]/compression-ft</property>
+    <factor>0.3</factor>
+    <axis>
+      <x> 0.0</x>
+      <y> 0.0</y>
+      <z> 1.0</z>
+    </axis>
+  </animation>
+  
+</PropertyList>
