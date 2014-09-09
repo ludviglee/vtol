@@ -41,4 +41,4 @@ var init = func {
     }
 };
 
-setlistener("/sim/signals/fdm-initialized", init);
+#setlistener("/sim/signals/fdm-initialized", init);

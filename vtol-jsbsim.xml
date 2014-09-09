@@ -38,9 +38,9 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="SLUG*FT2"> 600  </ixx>
-   <iyy unit="SLUG*FT2"> 600  </iyy>
-   <izz unit="SLUG*FT2"> 600  </izz>
+   <ixx unit="SLUG*FT2"> 1500 </ixx>
+   <iyy unit="SLUG*FT2"> 1500 </iyy>
+   <izz unit="SLUG*FT2"> 1500 </izz>
    <emptywt unit="LBS">  2000 </emptywt>
    <location name="CG" unit="M">
      <x> 0.00 </x>
@@ -255,6 +255,42 @@
          <property>aero/qbar-psf</property>
          <property>aero/cl-squared</property>
          <value>0.1</value>
+       </product>
+     </function>
+
+   </axis>
+
+   <axis name="ROLL">
+
+     <function name="aero/moment/Roll_damp">
+       <description>Roll moment due to roll rate</description>
+       <product>
+         <property>velocities/p-aero-rad_sec</property>
+         <value>-0.5</value>
+       </product>
+     </function>
+
+   </axis>
+
+   <axis name="PITCH">
+
+     <function name="aero/moment/Pitch_damp">
+       <description>Pitch moment due to pitch rate</description>
+       <product>
+         <property>velocities/q-aero-rad_sec</property>
+         <value>-0.5</value>
+       </product>
+     </function>
+
+   </axis>
+
+   <axis name="YAW">
+
+     <function name="aero/moment/Yaw_damp">
+       <description>Yaw moment due to yaw rate</description>
+       <product>
+         <property>velocities/r-aero-rad_sec</property>
+         <value>-0.5</value>
        </product>
      </function>
 
