@@ -6,7 +6,7 @@ var update = func {
     var aileron    = getprop("/controls/flight/aileron");
     var elevator   = getprop("/controls/flight/elevator");
     var rudder     = getprop("/controls/flight/rudder");
-    var throttle   = getprop("/controls/engines/engine[0]/throttle");
+    var throttle   = getprop("/controls/engines/throttle");
 
     var aileron_factor = 0.3;
     var elevator_factor = 0.3;

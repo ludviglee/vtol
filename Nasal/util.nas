@@ -58,3 +58,28 @@ var PID = {
     me.value = me.proportional + me.integral;
   }
 };
+
+var degrees = func (radians) {
+    return (radians/(math.pi*2))*360;
+};
+
+var radians = func(degrees) {
+    return (degrees/360)*(math.pi*2);
+}
+
+var angle_difference = func(a, b) {
+    a = degrees(a);
+    b = degrees(b);
+    var invert=false;
+    if(b > a) {
+        invert=true;
+        var temp=a;
+        a=b;
+        b=temp;
+    }
+    var difference=math.fmod(a-b, 360);
+    if(difference > 180) difference -= 360;
+    if(invert) difference *= -1;
+    difference = radians(difference);
+    return difference;
+};

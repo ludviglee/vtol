@@ -266,7 +266,7 @@
        <description>Roll moment due to roll rate</description>
        <product>
          <property>velocities/p-aero-rad_sec</property>
-         <value>-0.5</value>
+         <value>-10</value>
        </product>
      </function>
 
@@ -278,7 +278,7 @@
        <description>Pitch moment due to pitch rate</description>
        <product>
          <property>velocities/q-aero-rad_sec</property>
-         <value>-0.5</value>
+         <value>-10</value>
        </product>
      </function>
 
@@ -290,7 +290,7 @@
        <description>Yaw moment due to yaw rate</description>
        <product>
          <property>velocities/r-aero-rad_sec</property>
-         <value>-0.5</value>
+         <value>-10</value>
        </product>
      </function>
 
